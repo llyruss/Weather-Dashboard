@@ -80,14 +80,14 @@ button {
     margin-top: 8px; 
 }
 
-#currentIconDiv {
+/* #currentIconDiv {
     display: flex ;
     align-items: center ;
 }
 
 #currentIcon {
     width: 225px ;
-}
+} */
 
 #weatherForecast h2 {
     margin-top: 20px ;
@@ -98,6 +98,7 @@ button {
 
 .forecastCard h4 {
     margin: 10px ;
+    color: whitesmoke
 }
 
 .forecastCard {

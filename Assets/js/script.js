@@ -20,22 +20,24 @@ fetch(getLatLongURL)
     })
 
 
-    //get same day  forcast information
+//get same day  forcast information
 
-    let sameDayURL = "https://api.openweathermap.org/data/2.5/weather?q=" +citySearched+"&appid=" + APIKey+"&units=imperial"
+let sameDayURL = "https://api.openweathermap.org/data/2.5/weather?q=" +citySearched+"&appid=" + APIKey+"&units=imperial"
     console.log(sameDayURL)
 
-    fetch(sameDayURL)
-        .then(function(response2){
-            return response2.json()
-        })
-        .then(function(dailyWeather){
-            console.log(dailyWeather)
+ fetch(sameDayURL)
+     .then(function(response2){
+        return response2.json()
+     })
+     .then(function(dailyWeather){
+         console.log(dailyWeather)
 
-            let todayTemp = dailyWeather.main.temp
-            let todayWind = dailyWeather.wind.speed
-            let todayHumidity = dailyWeather.main.humidity
-            let todayIconCode = dailyWeather.weather[0].icon
-            let todayIcon = "http://openweathermap.org/img/w/"+todayIconCode+".png"
+        let todayTemp = dailyWeather.main.temp
+        let todayWind = dailyWeather.wind.speed
+        let todayHumidity = dailyWeather.main.humidity
+        let todayIconCode = dailyWeather.weather[0].icon
+        let todayIcon = "http://openweathermap.org/img/w/"+todayIconCode+".png"
 
         })
+
+//get 5 day forcast

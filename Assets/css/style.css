@@ -19,7 +19,7 @@ body {
 #currentWeather {
     border: solid ;
     padding: 20px ;
-    margin-right: 100px ;
+    margin-right: 30px ;
     display: flex; 
 }
 
@@ -92,6 +92,11 @@ button {
     color: whitesmoke
 }
 
+.forecastCard h5 {
+    margin: 10px ;
+    color: whitesmoke
+}
+
 .forecastCard {
     margin: 20px ;
     padding: 10px ;
@@ -100,4 +105,5 @@ button {
 
 .forecastCard h3 {
     margin: 0 ;
+    color: whitesmoke
 }

@@ -89,7 +89,7 @@ let getLatLongURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + citySear
         //day four
         let dayFour = moment().add(4,"d").format("M/D/YYYY")
         let dayFourTemp = fiveDay.list[29].main.temp
-        let dayForWind = fiveDay.list[29].wind.speed
+        let dayFourWind = fiveDay.list[29].wind.speed
         let dayFourHumidity = fiveDay.list[29].main.humidity
         let dayFourIconCode = fiveDay.list[29].weather[0].icon
         let dayFourIcon = "http://openweathermap.org/img/w/"+dayFourIconCode+".png"
@@ -101,6 +101,78 @@ let getLatLongURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + citySear
         let dayFiveHumidity = fiveDay.list[37].main.humidity
         let dayFiveIconCode = fiveDay.list[37].weather[0].icon
         let dayFiveIcon = "http://openweathermap.org/img/w/"+dayFiveIconCode+".png"
+
+        //display five day forcast
+
+        //day one
+         let forcastDayOne = document.getElementById("date1")
+         let OneDayTemp=document.getElementById("temp1")
+         let OneDayWind=document.getElementById("wind1")
+         let OneDayHumidity =document.getElementById("humidity1")
+
+         forcastDayOne.textContent = dayOne
+         OneDayTemp.textContent = dayOneTemp
+         OneDayWind.textContent = dayOneWind
+         OneDayHumidity.textContent = dayOneHumidity
+
+         let icon1 = document.getElementById("icon1")
+         icon1.setAttribute("src", dayOneIcon)
+
+         //day two
+         let forcastDayTwo = document.getElementById("date2")
+         let TwoDayTemp=document.getElementById("temp2")
+         let TwoDayWind=document.getElementById("wind2")
+         let TwoDayHumidity =document.getElementById("humidity2")
+
+         forcastDayTwo.textContent = dayTwo
+         TwoDayTemp.textContent = dayTwoTemp
+         TwoDayWind.textContent = dayTwoWind
+         TwoDayHumidity.textContent = dayTwoHumidity
+
+         let icon2 = document.getElementById("icon2")
+         icon2.setAttribute("src", dayTwoIcon)
+
+         //day three
+         let forcastDayThree = document.getElementById("date3")
+         let ThreeDayTemp=document.getElementById("temp3")
+         let ThreeDayWind=document.getElementById("wind3")
+         let ThreeDayHumidity =document.getElementById("humidity3")
+
+         forcastDayThree.textContent = dayThree
+         ThreeDayTemp.textContent = dayThreeTemp
+         ThreeDayWind.textContent = dayThreeWind
+         ThreeDayHumidity.textContent = dayThreeHumidity
+
+         let icon3 = document.getElementById("icon3")
+         icon3.setAttribute("src", dayThreeIcon)
+
+         //day four
+         let forcastDayFour = document.getElementById("date4")
+         let fourDayTemp=document.getElementById("temp4")
+         let fourDayWind=document.getElementById("wind4")
+         let fourDayHumidity =document.getElementById("humidity4")
+
+         forcastDayFour.textContent = dayFour
+         fourDayTemp.textContent = dayFourTemp
+         fourDayWind.textContent = dayFourWind
+         fourDayHumidity.textContent = dayFourHumidity
+
+         let icon4 = document.getElementById("icon4")
+         icon4.setAttribute("src", dayFourIcon)
+
+         //day five
+         let forcastDayFive = document.getElementById("date5")
+         let fiveDayTemp=document.getElementById("temp5")
+         let fiveDayWind=document.getElementById("wind5")
+         let fiveDayHumidity =document.getElementById("humidity5")
+
+         forcastDayFive.textContent = dayFive
+         fiveDayTemp.textContent = dayFiveTemp
+         fiveDayWind.textContent = dayFiveWind
+         fiveDayHumidity.textContent = dayFiveHumidity
+
+         let icon5 = document.getElementById("icon5")
+         icon5.setAttribute("src", dayFiveIcon)
 
        })
      })

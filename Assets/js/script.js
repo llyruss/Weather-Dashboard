@@ -2,10 +2,24 @@ let APIKey = "a855332de88e2807d74d20b390983564"
 let today = moment().format("M/D/YYYY")
 
 
-let citySearched = "Minneapolis"
+let citySearchedInput = document.getElementById("cityInput")
+let citySearched = ""
+let searchButton= document.getElementById("searchButton")
+let sameDayURL = ""
 
-let sameDayURL = "https://api.openweathermap.org/data/2.5/weather?q=" +citySearched+"&appid=" + APIKey+"&units=imperial"
 
+searchButton.addEventListener("click", function(){
+
+   citySearched=citySearchedInput.value
+
+   sameDayURL = "https://api.openweathermap.org/data/2.5/weather?q=" +citySearched+"&appid=" + APIKey+"&units=imperial"
+
+   console.log(citySearched)
+
+   setWeather()
+})
+
+function setWeather(){
 //get same day  forcast information
 
  fetch(sameDayURL)
@@ -61,7 +75,6 @@ let getLatLongURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + citySear
         console.log(fiveDay)
 
         //day one
-
         let dayOne = moment().add(1,"d").format("M/D/YYYY")
         let dayOneTemp = fiveDay.list[5].main.temp
         let dayOneWind = fiveDay.list[5].wind.speed
@@ -70,7 +83,6 @@ let getLatLongURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + citySear
         let dayOneIcon = "http://openweathermap.org/img/w/"+dayOneIconCode+".png"
 
         //day two
-
         let dayTwo = moment().add(2,"d").format("M/D/YYYY")
         let dayTwoTemp = fiveDay.list[13].main.temp
         let dayTwoWind = fiveDay.list[13].wind.speed
@@ -176,7 +188,7 @@ let getLatLongURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + citySear
 
        })
      })
-
+   }
     
     
 

@@ -216,11 +216,26 @@ function displaySearches(){
    console.log(history)
 
    let historyDiv = document.getElementById("recentSearches")
+
+   //clears our all recent history 
+   while (historyDiv.firstChild) {
+      historyDiv.removeChild(historyDiv.firstChild);
+  }
   
+  //loads all history to page
    for(let i=history.length-1; i>=0; i--){
       let button = document.createElement("button")
       button.innerHTML=history[i]
       historyDiv.appendChild(button)
+
+      button.addEventListener("click", function(e) {
+         citySearched=e.target.innerHTML
+
+         sameDayURL = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearched + "&appid=" + APIKey + "&units=imperial"
+
+         console.log(citySearched)
+         setWeather()
+      } )
    }
 }
 

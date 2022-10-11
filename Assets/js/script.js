@@ -38,7 +38,7 @@ function setWeather() {
          let todayWind = dailyWeather.wind.speed
          let todayHumidity = dailyWeather.main.humidity
          let todayIconCode = dailyWeather.weather[0].icon
-         let todayIcon = "http://openweathermap.org/img/w/" + todayIconCode + ".png"
+         let todayIcon = "https://openweathermap.org/img/w/" + todayIconCode + ".png"
 
          //display same day forcast
 
@@ -61,7 +61,7 @@ function setWeather() {
    //get city lat and long
    //get 5 day forcast
 
-   let getLatLongURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + citySearched + "&limit=1&appid=" + APIKey
+   let getLatLongURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + citySearched + "&limit=1&appid=" + APIKey
 
    fetch(getLatLongURL)
       .then(function (response) {
@@ -71,7 +71,7 @@ function setWeather() {
 
          let cityLat = latLong[0].lat
          let cityLong = latLong[0].lon
-         let FiveDayURL = "http://api.openweathermap.org/data/2.5/forecast?lat=" + cityLat + "&lon=" + cityLong + "&appid=" + APIKey + "&units=imperial"
+         let FiveDayURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + cityLat + "&lon=" + cityLong + "&appid=" + APIKey + "&units=imperial"
 
          fetch(FiveDayURL)
             .then(function (response3) {
@@ -86,7 +86,7 @@ function setWeather() {
                let dayOneWind = fiveDay.list[5].wind.speed
                let dayOneHumidity = fiveDay.list[5].main.humidity
                let dayOneIconCode = fiveDay.list[5].weather[0].icon
-               let dayOneIcon = "http://openweathermap.org/img/w/" + dayOneIconCode + ".png"
+               let dayOneIcon = "https://openweathermap.org/img/w/" + dayOneIconCode + ".png"
 
                //day two
                let dayTwo = moment().add(2, "d").format("M/D/YYYY")
@@ -94,7 +94,7 @@ function setWeather() {
                let dayTwoWind = fiveDay.list[13].wind.speed
                let dayTwoHumidity = fiveDay.list[13].main.humidity
                let dayTwoIconCode = fiveDay.list[13].weather[0].icon
-               let dayTwoIcon = "http://openweathermap.org/img/w/" + dayTwoIconCode + ".png"
+               let dayTwoIcon = "https://openweathermap.org/img/w/" + dayTwoIconCode + ".png"
 
                //day three
                let dayThree = moment().add(3, "d").format("M/D/YYYY")
@@ -102,7 +102,7 @@ function setWeather() {
                let dayThreeWind = fiveDay.list[21].wind.speed
                let dayThreeHumidity = fiveDay.list[21].main.humidity
                let dayThreeIconCode = fiveDay.list[21].weather[0].icon
-               let dayThreeIcon = "http://openweathermap.org/img/w/" + dayThreeIconCode + ".png"
+               let dayThreeIcon = "https://openweathermap.org/img/w/" + dayThreeIconCode + ".png"
 
                //day four
                let dayFour = moment().add(4, "d").format("M/D/YYYY")
@@ -110,7 +110,7 @@ function setWeather() {
                let dayFourWind = fiveDay.list[29].wind.speed
                let dayFourHumidity = fiveDay.list[29].main.humidity
                let dayFourIconCode = fiveDay.list[29].weather[0].icon
-               let dayFourIcon = "http://openweathermap.org/img/w/" + dayFourIconCode + ".png"
+               let dayFourIcon = "https://openweathermap.org/img/w/" + dayFourIconCode + ".png"
 
                //day five
                let dayFive = moment().add(5, "d").format("M/D/YYYY")
@@ -118,7 +118,7 @@ function setWeather() {
                let dayFiveWind = fiveDay.list[37].wind.speed
                let dayFiveHumidity = fiveDay.list[37].main.humidity
                let dayFiveIconCode = fiveDay.list[37].weather[0].icon
-               let dayFiveIcon = "http://openweathermap.org/img/w/" + dayFiveIconCode + ".png"
+               let dayFiveIcon = "https://openweathermap.org/img/w/" + dayFiveIconCode + ".png"
 
                //display five day forcast
 

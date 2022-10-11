@@ -19,6 +19,8 @@ Provide instructions and examples for use. Include screenshots as needed.
 
     ![an image of the search bar and recent searches](./Assets/images/weather_dashboard_search%2Bbar.png)
 
+Find the Weather Dashboard here: https://llyruss.github.io/Weather-Dashboard/
+
 ## Credits
 
 There were no collaborators on this project.
